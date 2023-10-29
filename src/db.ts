@@ -25,7 +25,7 @@ export interface Contact {
       gender: "female",
       company: "COSMETEX",
       email: "esperanzaboone@cosmetex.com",
-      photo: "https://randomuser.me/api/portraits/men/48.jpg"
+      photo: "https://randomuser.me/api/portraits/women/48.jpg"
     },
     {
       id: "5b2eee0a582ba867abbd7ce7",
