@@ -22,7 +22,7 @@ export default component$(() => {
         placeholder="Search..."
       />
       {filter.value && <p class="italic text-sm mt-2">You've searched for <span class="font-semibold">{filter.value}</span></p>}
-      <div class="mt-8">
+      <section class="mt-8">
         <Resource
           value={contacts}
           onPending={() => <div>Loading...</div>}
@@ -39,7 +39,7 @@ export default component$(() => {
           }}
           onRejected={(error) => <div>Error: {error}</div>}
         />
-      </div>
+      </section>
     </div>
   )
 })
