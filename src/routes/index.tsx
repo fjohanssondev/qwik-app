@@ -3,8 +3,22 @@ import { routeLoader$ } from "@builder.io/qwik-city";
 import { db } from "../db";
 import { Person } from "~/components/contacts/person";
 
-export const useContacts = routeLoader$(async () => {
-  return await Promise.resolve(db);
+export interface FilteredContact {
+  id: string;
+  name: string;
+  email: string;
+  company: string;
+  photo: string;
+}
+
+export const useContacts = routeLoader$(async (): Promise<FilteredContact[]> => {
+  return await Promise.resolve(db.map((contact) => ({
+    id: contact.id,
+    name: contact.name,
+    email: contact.email,
+    company: contact.company,
+    photo: contact.photo,
+  })));
 });
 
 export default component$(() => {
