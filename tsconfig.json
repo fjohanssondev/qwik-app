@@ -22,5 +22,5 @@
     }
   },
   "files": ["./.eslintrc.cjs"],
-  "include": ["src", "./*.d.ts", "./*.config.ts", "db.ts"]
+  "include": ["src", "./*.d.ts", "./*.config.ts", "src/db.ts"]
 }
